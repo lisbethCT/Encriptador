@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Montserrat:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="Img/lis.png" class="logo" />
+    </header>
+    <main>
+      <section class="seccion-entradas">
+        <textarea
+          id="entrada"
+          cols="40"
+          rows="10"
+          class="input-entrada"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+
+        <div class="informacion">
+          <h6>
+            <img src="Img/bi_exclamation-circle-fill.png" />
+            Solo letras minúsculas y sin acentos
+          </h6>
+        </div>
+        <div class="botones">
+          <button id="btnEntrada" class="btn-encriptar" onclick=" Encriptar()">
+            Encriptar
+          </button>
+          <button
+            id="btnSalida"
+            class="btn-desencriptar"
+            onclick=" Desencriptar()"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <!--  ***************************    seccion 2    ***************************    -->
+      <section class="seccion-resultados">
+        <!-- <div class="muneca">
+                    <img src="Img/Muñeco.png" alt="">
+                </div> -->
+        <textarea cols="20" rows="10" id="resultado" class="salida"></textarea>
+
+        <div class="mensaje-no">
+          <h2 class="no1">Ningún mensaje fue encontrado</h2>
+          <h3 class="no2">
+            Escriba el texto que desea encriptar o desencripta
+          </h3>
+        </div>
+
+        <div class="boton">
+          <button id="btnCopiar" class="btn-copiar" onclick="Copiar()">
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+      <p class="pie">Encriptador Grupo 5 ONE 2023</p>
+    </footer>
+  </body>
+</html>

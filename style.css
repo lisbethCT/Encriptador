@@ -1,0 +1,165 @@
+* {
+  background: #f3f5fc;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+header {
+  background: #0a3871;
+}
+
+.logo {
+  padding-top: 5px;
+  margin: 30px;
+  width: 5%;
+  border-radius: 24px;
+  border: 3px solid #d8dfe8;
+  background: none;
+}
+
+main {
+  display: flex; /*permite alinear el espacio dentro de la interfaz*/
+  margin-bottom: 50px;
+  margin-left: 80px;
+}
+/**************************** SECCION ENTRADA **************************/
+
+.input-entrada {
+  border: none;
+  color: #0a3871;
+  margin-top: 90px;
+  text-transform: lowercase;
+  resize: none;
+}
+::placeholder {
+  color: #0a3871;
+}
+.input-entrada:focus {
+  outline: none;
+}
+
+.informacion {
+  color: #495057;
+  font-size: 18px;
+  text-align: center;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.botones {
+  display: flex;
+  margin-top: 16px;
+}
+
+.btn-encriptar,
+.btn-desencriptar {
+  border-radius: 24px;
+  cursor: pointer; /* el curosr en forma de manita*/
+  border: 1px solid #000000;
+  /*margin-left: 30px;*/
+  width: 328px;
+  height: 67px;
+  /* margin: 0 40px 0 10px; */
+  text-align: center;
+}
+
+.btn-encriptar {
+  background: #0a3871;
+  color: #d8dfe8;
+}
+
+.btn-desencriptar {
+  background: #d8dfe8;
+  color: #0a3871;
+  margin-left: 30px;
+}
+
+/**************************** RESULTADOS *****************************/
+.salida {
+  background: white;
+  background-image: url(Img/Muñeco.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  color: #0a3871;
+  margin-left: 80px;
+  margin-top: 20px;
+  padding-left: 20px;
+  /* position: fixed; */
+  resize: none;
+  text-transform: lowercase;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.salida:focus {
+  outline: none;
+}
+
+.mensaje-no {
+  margin-left: 80px;
+  margin-top: 30px;
+  padding-left: 20px;
+  /* position: fixed; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensaje-no h2 {
+  color: #343a40;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  width: 70%;
+}
+
+.mensaje-no h3 {
+  color: #495057;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  width: 80%;
+}
+
+.btn-copiar {
+  border: 1px solid #000000;
+  border-radius: 24px;
+  color: #d8dfe8;
+  background: #0a3871;
+  cursor: pointer; /* el curosr en forma de manita*/
+  height: 67px;
+  margin-left: 108px;
+  margin-top: 20px;
+  position: absolute;
+  width: 336px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 50px;
+  margin-top: 70px;
+  background: #0a3871;
+}
+.pie {
+  color: #d8dfe8;
+  background: #0a3871;
+}
