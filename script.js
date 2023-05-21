@@ -1,13 +1,11 @@
-//******************** OPCION NO 2 ********************
-
 const texto_entrada = document.querySelector(".input-entrada");
 const texto_salida = document.querySelector(".salida");
 
 const h2 = document.querySelector(".no1");
 const h3 = document.querySelector(".no2");
 
-let msj_no1 = "Ningún mensaje fue encontrado";
-let msj_no2 = "Escriba el texto que desea encriptar o desencriptar";
+const btnCopiar = document.querySelector(".btn-copiar");
+const mensaje_no = document.querySelector(".mensaje-no");
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -29,16 +27,19 @@ function Encriptar() {
   if (texto_entrada.value == null || texto_entrada.value == "") {
     texto_salida.style.backgroundImage = "url(Img/Muñeco.png)";
     texto_salida.value = "";
-    h2.innerHTML = msj_no1;
-    h3.innerHTML = msj_no2;
+    mensaje_no.style.visibility = "visible ";
+    btnCopiar.style.display = "none";
+
     texto_entrada.focus();
   } else {
     const textoDesencriptado = encriptarMensaje(texto_entrada.value);
     texto_salida.value = textoDesencriptado;
     texto_entrada.value = "";
     texto_salida.style.backgroundImage = "none";
-    h2.innerHTML = "";
-    h3.innerHTML = "";
+
+    mensaje_no.style.visibility = "hidden";
+
+    btnCopiar.style.display = "flex";
   }
 }
 
@@ -60,17 +61,17 @@ function encriptarMensaje(entrada) {
 function Desencriptar() {
   if (texto_entrada.value == null || texto_entrada.value == "") {
     texto_salida.style.backgroundImage = "url(Img/Muñeco.png)";
+    mensaje_no.style.visibility = "visible ";
+    btnCopiar.style.display = "none";
     texto_salida.value = "";
-    h2.innerHTML = msj_no1;
-    h3.innerHTML = msj_no2;
     texto_entrada.focus();
   } else {
     const textoDesencriptado = desencriptarMensaje(texto_entrada.value);
     texto_salida.value = textoDesencriptado;
     texto_entrada.value = "";
     texto_salida.style.backgroundImage = "none";
-    h2.innerHTML = "";
-    h3.innerHTML = "";
+    mensaje_no.style.visibility = "hidden";
+    btnCopiar.style.display = "flex";
   }
 }
 
@@ -92,6 +93,7 @@ function Copiar() {
   contenido.select();
   document.execCommand("copy");
   texto_salida.value = "";
+  texto_entrada.focus();
 }
 
 // //img =>
